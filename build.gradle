@@ -55,17 +55,17 @@ tasks.withType(Test) {
         }
     }
 }
-/*
-task StudentRegistrationForm(type: Test){
+
+task MainPageForBusiness(type: Test){
     systemProperty("remoteURL", System.getProperty("remoteURL",""))
     useJUnitPlatform{
-        includeTags "StudentRegistrationForm"
+        includeTags "ForBusiness"
     }
 }
 
-task MvideoTests(type: Test){
+task MainPageForYourself(type: Test){
     systemProperty("remoteURL", System.getProperty("remoteURL",""))
     useJUnitPlatform{
-        includeTags "MvideoTests"
+        includeTags "ForYourself"
     }
-}*/
+}

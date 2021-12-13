@@ -6,7 +6,7 @@ import static io.qameta.allure.Allure.step;
 public class MainPages {
 
 
-    public MainPages openMainPageYourSelf() {
+    public MainPages openMainPageYourself() {
         step("Открыть главную страницу Сбермаркета 'Для себя'", () -> {
             open("https://sbermarket.ru/");
         });
