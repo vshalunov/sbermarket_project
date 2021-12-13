@@ -29,11 +29,12 @@ public class Attach {
         return ((TakesScreenshot) getWebDriver()).getScreenshotAs(OutputType.BYTES);
     }
 
-    public static void browserConsoleLogs() {
+    public static String browserConsoleLogs() {
         attachAsText(
                 "Browser console logs",
                 String.join("\n", Selenide.getWebDriverLogs(BROWSER))
         );
+        return String.join("\n", Selenide.getWebDriverLogs(BROWSER));
     }
 
     @Attachment(value = "Video", type = "text/html", fileExtension = ".html")
