@@ -7,10 +7,15 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
+import java.util.List;
+
+import static com.codeborne.selenide.CollectionCondition.texts;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$$;
 import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
@@ -57,5 +62,21 @@ public class SbermarketForYourselfTests extends TestBase {
         });
     }
 
+    @MethodSource("com.github.zlwqa.tests.Footer#footerColumns")
+    @DisplayName("Отображение значений в подвале сайта")
+    @Tags({@Tag("ForYourself"), @Tag("High")})
+    @ParameterizedTest(name = "Отображение значений {1} в подвале сайта у колонки с названием {0}")
+    @Owner("Шалунов Василий (zlw-qa)")
+    @Feature("Подвал")
+    @Story("Отображение значений в подвале сайта")
+    @Severity(SeverityLevel.BLOCKER)
+    @Link(name = "СберМаркет", url = "https://business.sbermarket.ru/")
+    void displayOfTheOverviewByCategoryTest(String nameColumnFooter, List<String> footerColumns) {
+        mainpages.openMainPageYourself();
 
+        step("Перейти в категорию " + nameColumnFooter, () -> {
+            $$("div.footer__column").find(text(nameColumnFooter)).$$("li")
+                    .shouldHave(texts(footerColumns));
+        });
+    }
 }
