@@ -7,10 +7,13 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.EnumSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$$;
 import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
@@ -56,5 +59,46 @@ public class SbermarketForBusinessTests extends TestBase {
             $("div._2oqP5").shouldHave(text(searchQuery));
         });
     }
+
+    @CsvSource(value = {
+            "Войти | Введите номер телефона, чтобы войти или зарегистрироваться",
+            "Заказать обратный звонок | Мы свяжемся с вами в течениии следующего рабочего дня и ответим на все вопросы"
+    }, delimiter = '|')
+    @Tags({@Tag("ForBusiness"), @Tag("Low")})
+    @ParameterizedTest(name = "Отображение вспомогательного текста в модальном окне {0}")
+    @DisplayName("Отображение вспомогательного текста в модальном  окне")
+    @Owner("Шалунов Василий (zlw-qa)")
+    @Feature("Главная страница СберМаркет 'Для себя'")
+    @Story("Вспомогательный текст в модальном окне")
+    @Severity(SeverityLevel.MINOR)
+    @Link(name = "СберМаркет", url = "https://business.sbermarket.ru/")
+    void displayDescriptionOfModalWindowTest(String modalWindow, String descriptionOfModalWindow) {
+        mainpages.openMainPageForBusiness();
+
+        step("Открыть модальное окно " + modalWindow, () -> {
+            $$("button._30Jfu").find(text(modalWindow)).click();
+        });
+        step("Отображение вспомогательного текста " + descriptionOfModalWindow + "в модальном окне", () -> {
+            $("div.bKabp").shouldHave(text(descriptionOfModalWindow));
+        });
+    }
+
+    @EnumSource(TopNavigatePanelForBusiness.class)
+    @DisplayName("Пункты навигационной панели")
+    @Tags({@Tag("ForBusiness"), @Tag("High")})
+    @ParameterizedTest(name = "Отображение пункта {0} в навигационной панели ")
+    @Owner("Шалунов Василий (zlw-qa)")
+    @Feature("Меню")
+    @Story("Навигационная панель")
+    @Severity(SeverityLevel.BLOCKER)
+    @Link(name = "СберМаркет", url = "https://business.sbermarket.ru/")
+    void displayOfNavigateItemTest(TopNavigatePanelForBusiness topNavigatePanelForBusiness) {
+        mainpages.openMainPageForBusiness();
+
+        step("Найти отображение пункта " + topNavigatePanelForBusiness + " в навигационной панели", () -> {
+            $("._2mePy").shouldHave(text(topNavigatePanelForBusiness.getTopNavigatePanel()));
+        });
+    }
+
 
 }

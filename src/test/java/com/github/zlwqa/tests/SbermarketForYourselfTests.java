@@ -56,4 +56,6 @@ public class SbermarketForYourselfTests extends TestBase {
             $("div._2oqP5").shouldHave(text(searchQuery));
         });
     }
+
+
 }
