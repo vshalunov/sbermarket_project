@@ -9,8 +9,10 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.EnumSource;
-import org.junit.jupiter.params.provider.ValueSource;
 
+import java.time.Duration;
+
+import static com.codeborne.selenide.Condition.enabled;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
@@ -39,27 +41,6 @@ public class SbermarketForBusinessTests extends TestBase {
         });
     }
 
-    @ValueSource(strings = {"Самара, Россия",
-            "Самарская область, Россия"})
-    @Tags({@Tag("ForBusiness"), @Tag("High")})
-    @ParameterizedTest(name = "Отображение значения {0} в выпадающем списке адресов")
-    @DisplayName("Отображение значения в выпадающем списке адресов")
-    @Owner("Шалунов Василий (zlw-qa)")
-    @Feature("Главная страница СберМаркет 'Для бизнеса'")
-    @Story("Поле для поиска адреса")
-    @Severity(SeverityLevel.BLOCKER)
-    @Link(name = "СберМаркет", url = "https://business.sbermarket.ru/")
-    void searchAddressResultsTest(String searchQuery) {
-        mainpages.openMainPageForBusiness();
-
-        step("Ввести в поле поиск Самар", () -> {
-            $("input._1H6W1").setValue("Самар");
-        });
-        step("Отображение значения " + searchQuery + "в выпадающем списке адресов", () -> {
-            $("div._2oqP5").shouldHave(text(searchQuery));
-        });
-    }
-
     @CsvSource(value = {
             "Войти | Введите номер телефона, чтобы войти или зарегистрироваться",
             "Заказать обратный звонок | Мы свяжемся с вами в течениии следующего рабочего дня и ответим на все вопросы"
@@ -76,7 +57,7 @@ public class SbermarketForBusinessTests extends TestBase {
         mainpages.openMainPageForBusiness();
 
         step("Открыть модальное окно " + modalWindow, () -> {
-            $$("button._30Jfu").find(text(modalWindow)).click();
+            $$("button._30Jfu").find(text(modalWindow)).should(enabled, Duration.ofSeconds(30)).click();
         });
         step("Отображение вспомогательного текста " + descriptionOfModalWindow + "в модальном окне", () -> {
             $("div.bKabp").shouldHave(text(descriptionOfModalWindow));
@@ -88,8 +69,8 @@ public class SbermarketForBusinessTests extends TestBase {
     @Tags({@Tag("ForBusiness"), @Tag("High")})
     @ParameterizedTest(name = "Отображение пункта {0} в навигационной панели ")
     @Owner("Шалунов Василий (zlw-qa)")
-    @Feature("Меню")
-    @Story("Навигационная панель")
+    @Feature("Навигационная панель")
+    @Story("Навигационная панель страницы СберМаркет 'Для бизнеса'")
     @Severity(SeverityLevel.BLOCKER)
     @Link(name = "СберМаркет", url = "https://business.sbermarket.ru/")
     void displayOfNavigateItemTest(TopNavigatePanelForBusiness topNavigatePanelForBusiness) {

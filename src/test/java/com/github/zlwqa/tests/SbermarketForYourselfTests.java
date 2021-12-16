@@ -68,10 +68,10 @@ public class SbermarketForYourselfTests extends TestBase {
     @ParameterizedTest(name = "Отображение значений {1} в подвале сайта у колонки с названием {0}")
     @Owner("Шалунов Василий (zlw-qa)")
     @Feature("Подвал")
-    @Story("Отображение значений в подвале сайта")
+    @Story("Подвал страницы СберМаркет 'Для себя'")
     @Severity(SeverityLevel.BLOCKER)
     @Link(name = "СберМаркет", url = "https://business.sbermarket.ru/")
-    void displayOfTheOverviewByCategoryTest(String nameColumnFooter, List<String> footerColumns) {
+    void displayValuesInTheFooterTest(String nameColumnFooter, List<String> footerColumns) {
         mainpages.openMainPageYourself();
 
         step("Перейти в категорию " + nameColumnFooter, () -> {
