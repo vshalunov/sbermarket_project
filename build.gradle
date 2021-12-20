@@ -7,9 +7,9 @@ repositories {
     mavenCentral()
 }
 
-def allureVersion = "2.16.0",
-    selenideVersion = "5.25.0",
-    junitVersion = "5.8.1"
+def allureVersion = "2.16.1",
+    selenideVersion = '6.1.1',
+    junitVersion = "5.8.2"
 
 allure {
     version = allureVersion
@@ -34,7 +34,7 @@ dependencies {
             "org.junit.jupiter:junit-jupiter:$junitVersion")
 
     testRuntimeOnly(
-            "org.slf4j:slf4j-simple:1.7.29",
+            "org.slf4j:slf4j-simple:1.7.32",
             "org.junit.jupiter:junit-jupiter-engine:$junitVersion")
 }
 
