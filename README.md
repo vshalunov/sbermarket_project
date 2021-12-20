@@ -27,7 +27,7 @@
 <img width="6%" title="Jira" src="images/logo/Jira.svg">
 </p>
 
-## <img width="6%" title="Jira" src="images/logo/ITerm2_v3_icon.png"> Запуск тестов из терминала
+## <img width="5%" title="Jira" src="images/logo/ITerm2_v3_icon.png"> Запуск тестов из терминала
 ### Удаленный запуск тестов
 ```
 gradle clean
@@ -37,23 +37,21 @@ gradle clean
 ```
 ### Параметры сборки
 > <details>
-> <summary> :point_left: <code>task</code> - список тестов, сгруппированных по параметру тега. В зависимости от выбранного параметра будут запускаться определенные группы тестов</summary>
->
+> <summary><code>task</code> - список тестов, сгруппированных по параметру тега. В зависимости от выбранного параметра будут запускаться определенные группы тестов</summary>
 > + test - запуск всех тестов
 > + MainPageForBusiness - запускают тесты только с тегом "ForBusiness" (Страница "Для бизнеса")
 > + MainPageForYourself - запускают тесты только с тегом "ForYourself" (Страница "Для себя")
 > </details>
-
 > 
 > <code>remoteURL</code> - адрес удаленного сервера, на котором будут запускаться тесты
 > 
 > <code>threads</code> - количество потоков для запуска тестов
-### <img width="6%" title="Allure Report" src="images/logo/Allure_Report.svg"> Формирование отчета Allure
+### <img width="5%" title="Allure Report" src="images/logo/Allure_Report.svg"> Формирование отчета Allure
 ```
 allure serve build/allure-results
 ```
 
-## <img width="6%" title="Jenkins" src="images/logo/Jenkins.svg"> Запуск тестов в Jenkins
+## <img width="5%" title="Jenkins" src="images/logo/Jenkins.svg"> Запуск тестов в Jenkins
 ### Для запуска тестов в Jenkins необходимо выполнить следующие шаги:
 1. Открыть сборку [Jenkins](https://jenkins.autotests.cloud/job/09-zlw-qa-sbermarket-project)
 2. Нажать на таск <code>"Собрать с параметрами"</code>
