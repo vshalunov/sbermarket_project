@@ -22,10 +22,8 @@ allure {
 }
 
 dependencies {
-    implementation 'org.testng:testng:7.4.0'
-    implementation 'org.testng:testng:7.4.0'
     testImplementation(
-            'org.aspectj:aspectjweaver:1.9.6',
+            'org.aspectj:aspectjweaver:1.9.7',
             "com.codeborne:selenide:$selenideVersion",
             "io.qameta.allure:allure-selenide:$allureVersion",
             "org.aeonbits.owner:owner:1.0.12",

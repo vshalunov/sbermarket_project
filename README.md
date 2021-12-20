@@ -47,10 +47,6 @@ gradle clean
 > <code>remoteURL</code> - адрес удаленного сервера, на котором будут запускаться тесты
 > 
 > <code>threads</code> - количество потоков для запуска тестов
-### <img width="5%" title="Allure Report" src="images/logo/Allure_Report.svg"> Формирование отчета Allure
-```
-allure serve build/allure-results
-```
 
 ## <img width="5%" title="Jenkins" src="images/logo/Jenkins.svg"> Запуск тестов в Jenkins
 ### Для запуска тестов в Jenkins необходимо выполнить следующие шаги:
@@ -68,6 +64,10 @@ allure serve build/allure-results
 <img title="Allure Report" src="images/screens/jenkins_allure_report.png">
 </p>
 
+### <img width="5%" title="Allure Report" src="images/logo/Allure_Report.svg"> Формирование отчета Allure
+```
+allure serve build/allure-results
+```
 
 
 
