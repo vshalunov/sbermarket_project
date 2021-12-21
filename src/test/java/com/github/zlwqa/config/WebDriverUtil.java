@@ -33,7 +33,7 @@ public class WebDriverUtil {
 
         if (!System.getProperty("remoteURL").equals("")) {
             capabilities.setCapability("enableVNC", false);
-            capabilities.setCapability("enableVideo", true);
+            capabilities.setCapability("enableVideo", false);
             Configuration.remote = remoteURL;
         }
 
