@@ -79,6 +79,26 @@ allure serve build/allure-results
 <img title="Allure Report" src="images/screens/jenkins_allure_report.png">
 </p>
 
+## <img width="4%" title="Allure Report" src="images/logo/Allure_Report.svg"> Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/09-zlw-qa-sbermarket-project/allure/)
+### :dart: Главная страница Allure-отчета
+<p align="center">
+<img title="Allure Overview" src="images/screens/allure_overview.png">
+</p>
+
+### :dart: Информация о тестовом прогоне в графическом виде
+<p align="center">
+<img title="Allure Graphs" src="images/screens/allure_graphs.png">
+</p>
+
+### :dart: Группировка тестов по проверяемому функционалу
+<p align="center">
+<img title="Allure Behaviors" src="images/screens/allure_behaviors.png">
+</p>
+
+## <img width="4%" title="Telegram" src="images/logo/Telegram.svg"> Уведомления в Telegram с использованием бота
+<p align="center">
+<img title="Telegram Notifications" src="images/screens/telegram_notifications.png">
+</p>
 
 
 
