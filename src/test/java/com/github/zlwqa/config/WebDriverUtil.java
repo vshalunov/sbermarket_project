@@ -25,7 +25,7 @@ public class WebDriverUtil {
         ChromeOptions chromeOptions = new ChromeOptions();
 
         chromeOptions.addArguments("--no-sandbox");
-       // chromeOptions.addArguments("--disable-infobars");
+        // chromeOptions.addArguments("--disable-infobars");
         chromeOptions.addArguments("--enable-automation");
         chromeOptions.addArguments("--disable-popup-blocking");
         chromeOptions.addArguments("--disable-notifications");
@@ -38,7 +38,8 @@ public class WebDriverUtil {
         }
 
         capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
-        Configuration.timeout=100000;
+        Configuration.browserCapabilities = capabilities;
+        Configuration.timeout = 100000;
         Configuration.pageLoadTimeout = 100000;
     }
 }
