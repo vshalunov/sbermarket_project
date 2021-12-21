@@ -27,12 +27,12 @@
 <img width="6%" title="Jira" src="images/logo/Jira.svg">
 </p>
 
-## <img width="5%" title="Jira" src="images/logo/ITerm2_v3_icon.png"> Запуск тестов из терминала
-### Локальный запуск тестов
+## <img width="4%" title="Jira" src="images/logo/ITerm2_v3_icon.png"> Запуск тестов из терминала
+### :rocket: Локальный запуск тестов
 ```
 gradle clean ${task}
 ```
-### Удаленный запуск тестов с заполненным файлом credentials.properties
+### :rocket: Удаленный запуск тестов с заполненным файлом credentials.properties
 ```
 gradle clean ${task}
 -DremoteURL=${REMOTEURL}
@@ -41,7 +41,7 @@ gradle clean ${task}
 -DbrowserSize=${BROWSER_SIZE}
 -Dthreads=${THREADS}
 ```
-### Параметры сборки
+### :rocket: Параметры сборки
 > <details>
 > <summary><code>task</code> - список тестов, сгруппированных по параметру тега. В зависимости от выбранного параметра будут запускаться определенные группы тестов</summary>
 >
@@ -59,11 +59,11 @@ gradle clean ${task}
 > <code>BROWSER_SIZE</code> - размер браузера, на котором будут запускаться тесты (_по умолчанию - <code>1920x1080</code>_)
 > 
 > <code>THREADS</code> - количество потоков для запуска тестов
-### <img width="5%" title="Allure Report" src="images/logo/Allure_Report.svg"> Формирование отчета Allure
+### <img width="4%" title="Allure Report" src="images/logo/Allure_Report.svg"> Формирование отчета Allure
 ```
 allure serve build/allure-results
 ```
-## <img width="5%" title="Jenkins" src="images/logo/Jenkins.svg"> Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/09-zlw-qa-sbermarket-project/)
+## <img width="4%" title="Jenkins" src="images/logo/Jenkins.svg"> Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/09-zlw-qa-sbermarket-project/)
 ### Для запуска тестов в Jenkins необходимо выполнить следующие шаги:
 1. Открыть сборку [Jenkins](https://jenkins.autotests.cloud/job/09-zlw-qa-sbermarket-project)
 2. Нажать на таск <code>"Собрать с параметрами"</code>
