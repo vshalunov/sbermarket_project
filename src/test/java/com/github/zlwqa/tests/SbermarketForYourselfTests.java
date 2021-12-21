@@ -44,8 +44,8 @@ public class SbermarketForYourselfTests extends TestBase {
     @ValueSource(strings = {"Самара, Россия",
             "Самарская область, Россия"})
     @Tags({@Tag("ForYourself"), @Tag("High")})
-    @ParameterizedTest(name = "Отображение значения {0} в выпадающем списке адресов")
-    @DisplayName("Отображение значения в выпадающем списке адресов")
+    @ParameterizedTest(name = "{displayName} {0} в выпадающем списке адресов")
+    @DisplayName("Отображение значения")
     @Owner("Шалунов Василий (zlw-qa)")
     @Feature("Главная страница СберМаркет 'Для себя'")
     @Story("Поле для поиска адреса")
