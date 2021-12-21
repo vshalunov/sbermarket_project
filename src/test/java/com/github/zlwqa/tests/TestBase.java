@@ -13,7 +13,6 @@ public class TestBase {
 
     MainPages mainpages = new MainPages();
 
-
     @BeforeAll
     public static void setup() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());

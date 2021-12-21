@@ -38,6 +38,6 @@ public class WebDriverUtil {
 
         capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
         Configuration.browserCapabilities = capabilities;
-        Configuration.timeout=10000;
+        Configuration.timeout=90000;
     }
 }
