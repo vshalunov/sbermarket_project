@@ -68,13 +68,11 @@ public class SbermarketForYourselfTests extends TestBase {
     @ParameterizedTest(name = "{displayName} {1} в подвале сайта у колонки с названием {0}")
     @Owner("Шалунов Василий (zlw-qa)")
     @Feature("Подвал")
-
     @Story("Подвал страницы СберМаркет 'Для себя'")
     @Severity(SeverityLevel.BLOCKER)
     @Link(name = "СберМаркет", url = "https://business.sbermarket.ru/")
     void displayValuesInTheFooterTest(String nameColumnFooter, List<String> footerColumns) {
         mainpages.openMainPageYourself();
-        Allure.parameter("{displayName}",1);
 
         step("Перейти в категорию " + nameColumnFooter, () -> {
             $$("div.footer__column").find(text(nameColumnFooter)).$$("li")
