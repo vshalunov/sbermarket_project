@@ -64,7 +64,7 @@ gradle clean ${task}
 allure serve build/allure-results
 ```
 ## <img width="4%" title="Jenkins" src="images/logo/Jenkins.svg"> Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/09-zlw-qa-sbermarket-project/)
-### Для запуска тестов в Jenkins необходимо выполнить следующие шаги:
+### :triangular_flag_on_post:	 Для запуска тестов в Jenkins необходимо выполнить следующие шаги:
 1. Открыть сборку [Jenkins](https://jenkins.autotests.cloud/job/09-zlw-qa-sbermarket-project)
 2. Нажать на таск <code>"Собрать с параметрами"</code>
 3. Указать [значения параметров](#параметры-сборки)
@@ -73,7 +73,7 @@ allure serve build/allure-results
 <img title="Jenkins parameters" src="images/screens/jenkins_parameters.png">
 </p>
 
-### Для формирования отчета о прохождении тестов в Allure Report необходимо выполнить следующий шаг:
+### :triangular_flag_on_post: Для формирования отчета о прохождении тестов в Allure Report необходимо выполнить следующий шаг:
 5. После выполнения сборки нажать на любую ссылку/иконку <code>"Allure Report"</code>
 <p>
 <img title="Allure Report" src="images/screens/jenkins_allure_report.png">
