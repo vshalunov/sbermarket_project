@@ -28,7 +28,6 @@ public class WebDriverUtil {
         chromeOptions.addArguments("--disable-infobars");
         chromeOptions.addArguments("--disable-popup-blocking");
         chromeOptions.addArguments("--disable-notifications");
-        chromeOptions.addArguments("--lang=en-en");
 
         if (!System.getProperty("remoteURL").equals("")) {
             capabilities.setCapability("enableVNC", true);
