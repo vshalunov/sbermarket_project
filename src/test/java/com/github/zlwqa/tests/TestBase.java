@@ -4,7 +4,7 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import com.github.zlwqa.config.CredentialsConfig;
-import com.github.zlwqa.helpers.Attach;
+import com.github.zlwqa.helpers.AllureAttachments;
 import com.github.zlwqa.pages.MainPages;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.aeonbits.owner.ConfigFactory;
@@ -29,18 +29,18 @@ public class TestBase {
         Configuration.browserSize = "1920x1080";
         Configuration.remote = remoteURL;
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("enableVNC", true);
-        capabilities.setCapability("enableVideo", true);
+        capabilities.setCapability("enableVNC", false);
+        capabilities.setCapability("enableVideo", false);
         Configuration.browserCapabilities = capabilities;
-        Configuration.timeout=10000;
+        Configuration.timeout = 10000;
     }
 
     @AfterEach
     public void tearDown() {
-        Attach.screenshotAs("Last screenshot");
-        Attach.pageSource();
-        Attach.browserConsoleLogs();
-        Attach.addVideo();
+        AllureAttachments.screenshotAs("Last screenshot");
+        AllureAttachments.pageSource();
+        AllureAttachments.browserConsoleLogs();
+        AllureAttachments.addVideo();
         Selenide.closeWebDriver();
     }
 

@@ -1,6 +1,6 @@
 package com.github.zlwqa.tests;
 
-import com.github.zlwqa.helpers.Attach;
+import com.github.zlwqa.helpers.AllureAttachments;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -34,7 +34,7 @@ public class SbermarketForYourselfTests extends TestBase {
         mainpages.openMainPageYourself();
 
         step("Журналы консоли не должны содержать текст 'SEVERE'", () -> {
-            String consoleLogs = Attach.browserConsoleLogs();
+            String consoleLogs = AllureAttachments.browserConsoleLogs();
             String errorText = "SEVERE";
 
             assertThat(consoleLogs).doesNotContain(errorText);
