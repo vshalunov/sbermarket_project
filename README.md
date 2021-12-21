@@ -1,6 +1,6 @@
 # Проект по автоматизации тестирования для [Сбермаркет](https://sbermarket.ru/)
 <p align="center">
-<img width="65%" title="Сбермаркет" src="images/logo/Sbermarket_logo.png">
+<img width="50%" title="Сбермаркет" src="images/logo/Sbermarket_logo.png">
 </p>
 
 ## <img width="4%" title="Functional" src="images/logo/functional.png"> Покрытый функционал
