@@ -44,8 +44,8 @@ public class SbermarketForYourselfTests extends TestBase {
     @ValueSource(strings = {"Самара, Россия",
             "Самарская область, Россия"})
     @Tags({@Tag("ForYourself"), @Tag("High")})
-    @ParameterizedTest(name = "{displayName} {0} в выпадающем списке адресов")
     @DisplayName("Отображение значения")
+    @ParameterizedTest(name = "{displayName} {0} в выпадающем списке адресов")
     @Owner("Шалунов Василий (zlw-qa)")
     @Feature("Главная страница СберМаркет 'Для себя'")
     @Story("Поле для поиска адреса")
@@ -63,9 +63,9 @@ public class SbermarketForYourselfTests extends TestBase {
     }
 
     @MethodSource("com.github.zlwqa.tests.Footer#footerColumns")
-    @DisplayName("Отображение значений в подвале сайта")
+    @DisplayName("Отображение значений")
     @Tags({@Tag("ForYourself"), @Tag("High")})
-    @ParameterizedTest(name = "Отображение значений {1} в подвале сайта у колонки с названием {0}")
+    @ParameterizedTest(name = "{displayName} {1} в подвале сайта у колонки с названием {0}")
     @Owner("Шалунов Василий (zlw-qa)")
     @Feature("Подвал")
     @Story("Подвал страницы СберМаркет 'Для себя'")
