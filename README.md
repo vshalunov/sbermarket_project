@@ -3,7 +3,7 @@
 <img width="75%" title="Сбермаркет" src="images/logo/Sbermarket_logo.png">
 </p>
 
-## <img width="5%" title="Functional" src="images/logo/functional.png"> Покрытый функционал
+## <img width="4%" title="Functional" src="images/logo/functional.png"> Покрытый функционал
 ### UI
 - :white_check_mark: Отображение значения в выпадающем списке адресов на странице "Для себя"
 - :white_check_mark: Отображение значений в подвале сайта на странице "Для себя"
@@ -11,7 +11,7 @@
 - :white_check_mark: Отображение пунктов навигационной панели на странице "Для себя"
 - :white_check_mark: Отсутствие ошибок в журнале консоли страниц "Для себя" и "Для бизнеса"
 
-## Технологический стек
+## <img width="4%" title="Technologies" src="images/logo/technologies.png"> Технологический стек
 <p align="center">
 <img width="6%" title="IntelliJ IDEA" src="images/logo/Intelij_IDEA.svg">
 <img width="6%" title="Java" src="images/logo/Java.svg">
