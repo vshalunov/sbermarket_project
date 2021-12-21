@@ -34,12 +34,12 @@ public class WebDriverUtil {
         if (!System.getProperty("remoteURL").equals("")) {
             capabilities.setCapability("enableVNC", true);
             capabilities.setCapability("enableVideo", true);
-            Configuration.remote = remoteURL;
+            Configuration.remote = System.getProperty("remoteURL");
         }
 
         capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
         Configuration.browserCapabilities = capabilities;
         Configuration.timeout=90000;
-        Configuration.pageLoadTimeout = 90000;
+        //Configuration.pageLoadTimeout = 90000;
     }
 }
