@@ -6,12 +6,15 @@ import org.aeonbits.owner.Config;
 public interface WebDriverConfig extends Config {
 
     @Key("browser")
+    @DefaultValue("CHROME")
     String browser();
 
     @Key("versionBrowser")
+    @DefaultValue("91.0")
     String versionBrowser();
 
     @Key("browserSize")
+    @DefaultValue("1920x1080")
     String browserSize();
 
 }
