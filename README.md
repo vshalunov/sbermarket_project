@@ -3,7 +3,7 @@
 <img width="75%" title="Сбермаркет" src="images/logo/Sbermarket_logo.png">
 </p>
 
-## <img width="10%" title="Functional" src="images/logo/functional.png"> Покрытый функционал
+## <img width="5%" title="Functional" src="images/logo/functional.png"> Покрытый функционал
 ### UI
 - :white_check_mark: Отображение значения в выпадающем списке адресов на странице "Для себя"
 - :white_check_mark: Отображение значений в подвале сайта на странице "Для себя"
