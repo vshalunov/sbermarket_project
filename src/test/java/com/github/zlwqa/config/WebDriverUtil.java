@@ -32,13 +32,13 @@ public class WebDriverUtil {
         chromeOptions.addArguments("--disable-gpu");
 
         if (!System.getProperty("remoteURL").equals("")) {
-            capabilities.setCapability("enableVNC", true);
-            capabilities.setCapability("enableVideo", true);
+            capabilities.setCapability("enableVNC", false);
+            capabilities.setCapability("enableVideo", false);
             Configuration.remote = remoteURL;
         }
 
         capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
-        Configuration.browserCapabilities = capabilities;
+       // Configuration.browserCapabilities = capabilities;
         Configuration.timeout = 100000;
         Configuration.pageLoadTimeout = 100000;
     }
