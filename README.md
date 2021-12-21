@@ -28,11 +28,17 @@
 </p>
 
 ## <img width="5%" title="Jira" src="images/logo/ITerm2_v3_icon.png"> Запуск тестов из терминала
-### Удаленный запуск тестов
+### Локальный запуск тестов
 ```
-gradle clean
--Dtask=${task}
--DremoteURL=${remoteURL}
+gradle clean ${task}
+```
+### Удаленный запуск тестов с заполненным файлом credentials.properties
+```
+gradle clean ${task}
+-DremoteURL=${REMOTEURL}
+-Dbrowser=${BROWSER}
+-DversionBrowser=${BROWSER_VERSION}
+-DbrowserSize=${BROWSER_SIZE}
 -Dthreads=${THREADS}
 ```
 ### Параметры сборки
@@ -44,11 +50,20 @@ gradle clean
 > + MainPageForYourself - запускают тесты только с тегом "ForYourself" (Страница "Для себя")
 > </details>
 > 
-> <code>remoteURL</code> - адрес удаленного сервера, на котором будут запускаться тесты
+> <code>REMOTEURL</code> - адрес удаленного сервера, на котором будут запускаться тесты
 > 
-> <code>threads</code> - количество потоков для запуска тестов
-
-## <img width="5%" title="Jenkins" src="images/logo/Jenkins.svg"> Запуск тестов в Jenkins
+> <code>BROWSER</code> - браузер, на котором буду запускаться тесты (_по умолчанию - <code>chrome</code>_)
+> 
+> <code>BROWSER_VERSION</code> - версия сервера, на которой будут запускаться тесты (_по умолчанию - <code>91.0</code>_)
+> 
+> <code>BROWSER_SIZE</code> - размер браузера, на котором будут запускаться тесты (_по умолчанию - <code>1920x1080</code>_)
+> 
+> <code>THREADS</code> - количество потоков для запуска тестов
+### <img width="5%" title="Allure Report" src="images/logo/Allure_Report.svg"> Формирование отчета Allure
+```
+allure serve build/allure-results
+```
+## <img width="5%" title="Jenkins" src="images/logo/Jenkins.svg"> Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/09-zlw-qa-sbermarket-project/)
 ### Для запуска тестов в Jenkins необходимо выполнить следующие шаги:
 1. Открыть сборку [Jenkins](https://jenkins.autotests.cloud/job/09-zlw-qa-sbermarket-project)
 2. Нажать на таск <code>"Собрать с параметрами"</code>
@@ -64,10 +79,7 @@ gradle clean
 <img title="Allure Report" src="images/screens/jenkins_allure_report.png">
 </p>
 
-### <img width="5%" title="Allure Report" src="images/logo/Allure_Report.svg"> Формирование отчета Allure
-```
-allure serve build/allure-results
-```
+
 
 
 
