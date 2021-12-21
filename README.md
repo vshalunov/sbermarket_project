@@ -100,7 +100,10 @@ allure serve build/allure-results
 <img title="Telegram Notifications" src="images/screens/telegram_notifications.png">
 </p>
 
-
+## <img width="4%" title="Selenoid" src="images/logo/Selenoid.svg"> Пример запуска теста в Selenoid
+<p align="center">
+  <img title="Selenoid Video" src="images/gif/selenoid_video.gif">
+</p>
 
 
 
