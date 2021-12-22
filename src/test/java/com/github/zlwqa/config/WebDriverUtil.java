@@ -25,7 +25,6 @@ public class WebDriverUtil {
         ChromeOptions chromeOptions = new ChromeOptions();
 
         chromeOptions.addArguments("--no-sandbox");
-        // chromeOptions.addArguments("--disable-infobars");
         chromeOptions.addArguments("--enable-automation");
         chromeOptions.addArguments("--disable-popup-blocking");
         chromeOptions.addArguments("--disable-notifications");
