@@ -97,7 +97,7 @@ gradle clean ${task}
 >
 </details>
 
-### <img width="4%" title="Allure Report" src="images/logo/Allure_Report.svg"> Формирование отчета Allure
+## <img width="4%" title="Allure Report" src="images/logo/Allure_Report.svg"> Формирование отчета Allure
 
 <details>
 <summary>Подробнее</summary>
