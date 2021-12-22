@@ -172,7 +172,7 @@ allure serve build/allure-results
 <img title="Allure Results" src="images/screens/allure_results.png">
 </p>
 
-### :jigsaw: Сгруппированные тест-кейсы по проверяемому функционалу
+### :test_tube: Сгруппированные тест-кейсы по проверяемому функционалу
 
 <p align="center">
 <img title="Allure Test Cases" src="images/screens/allure_testcases.png">
