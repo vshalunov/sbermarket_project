@@ -34,7 +34,7 @@ public class WebDriverUtil {
         if (!System.getProperty("remoteURL").equals("")) {
             capabilities.setCapability("enableVNC", false);
             capabilities.setCapability("enableVideo", false);
-            Configuration.remote = remoteURL;
+            Configuration.remote = System.getProperty("remoteURL");
         }
 
         capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
