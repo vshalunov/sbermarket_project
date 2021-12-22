@@ -9,6 +9,8 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 
+import static io.qameta.allure.Allure.step;
+
 public class TestBase {
 
     MainPages mainpages = new MainPages();
@@ -25,7 +27,9 @@ public class TestBase {
         AllureAttachments.pageSource();
         AllureAttachments.browserConsoleLogs();
         AllureAttachments.addVideo();
-        Selenide.closeWebDriver();
+        step("Закрыть браузер", () -> {
+            Selenide.closeWebDriver();
+        });
     }
 
 
