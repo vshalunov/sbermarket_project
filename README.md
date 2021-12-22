@@ -32,11 +32,11 @@
 </p>
 
 > В данном проекте автотесты написаны на <code>Java</code> с использованием фреймворка <code>Selenide</code>
->  
+>
 > <code>JUnit 5</code> используется для модульного тестирования
 >
 > <code>Gradle</code> используется для автоматизированной сборки проекта
-> 
+>
 > <code>Jenkins</code> выполняет запуск тестов
 >
 > <code>Selenoid</code> выполняет запуск браузеров в контейнерах <code>Docker</code>
@@ -202,6 +202,20 @@ allure serve build/allure-results
 <p align="center">
   <img title="Selenoid Video" src="images/gif/selenoid_video.gif">
 </p>
+
+<details>
+<summary><img width="4%" title="Selenoid" src="images/logo/Selenoid.svg"> Пример запуска теста в Selenoid </summary>
+
+## <img width="4%" title="Selenoid" src="images/logo/Selenoid.svg"> Пример запуска теста в Selenoid
+
+> Для каждого теста записывается и прилагается видео прогона.
+
+<p align="center">
+  <img title="Selenoid Video" src="images/gif/selenoid_video.gif">
+</p>
+
+</details>
+
 
 
 
