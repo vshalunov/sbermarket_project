@@ -105,6 +105,8 @@ allure serve build/allure-results
 ```
 
 ## <img width="4%" title="Jenkins" src="images/logo/Jenkins.svg"> Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/09-zlw-qa-sbermarket-project/)
+<details>
+<summary>Подробнее</summary>
 
 ### :triangular_flag_on_post:     Для запуска тестов в Jenkins необходимо выполнить следующие шаги:
 
@@ -125,12 +127,16 @@ allure serve build/allure-results
 <img title="Allure Report" src="images/screens/jenkins_allure_report.png">
 </p>
 
+</details>
+
 ## <img width="4%" title="Allure Report" src="images/logo/Allure_Report.svg"> Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/09-zlw-qa-sbermarket-project/allure/)
+<details>
+<summary>Подробнее</summary>
 
 > <code>Allure-framework</code> используется в качестве инструмента для построения отчетов о прогоне автотестов.
 > Он позволяет получить информацию о ходе выполнения тестов, а также прикрепить скриншоты, логи и видео к формируемому отчету.
 > Имеется возможность указать различные теги, приоритеты и прочую сопутствующую информацию для тестов.
->
+
 
 ### :dart: Главная страница Allure-отчета
 
@@ -150,7 +156,11 @@ allure serve build/allure-results
 <img title="Allure Behaviors" src="images/screens/allure_behaviors.png">
 </p>
 
+</details>
+
 ## <img width="4%" title="Allure TestOps" src="images/logo/Allure_TestOps.svg"> Интеграция тестов c тест-менеджмент системой [Allure TestOps](https://allure.autotests.cloud/project/778/dashboards)
+<details>
+<summary>Подробнее</summary>
 
 > <code>Allure TestOps</code> это платформа управления качеством программного обеспечения, объединяющая автоматическое и ручное тестирование, которая позволяет управлять всем, что связано с тестированием, в одном месте.
 
@@ -178,7 +188,11 @@ allure serve build/allure-results
 <img title="Allure Test Cases" src="images/screens/allure_testcases.png">
 </p>
 
+</details>
+
 ## <img width="4%" title="Jira" src="images/logo/Jira.svg"> Интеграция тестов c таск-трекер системой [Jira](https://jira.autotests.cloud/browse/HOMEWORK-288)
+<details>
+<summary>Подробнее</summary>
 
 > Интеграция с <code>Jira</code> позволяет добавлять в задачи тест-кейсы, запуски и их результаты.
 
@@ -186,7 +200,12 @@ allure serve build/allure-results
 <img title="Jira Issues" src="images/screens/jira_issues.png">
 </p>
 
+</details>
+
 ## <img width="4%" title="Telegram" src="images/logo/Telegram.svg"> Уведомления в Telegram с использованием бота
+
+<details>
+<summary>Подробнее</summary>
 
 > Реализована отправка уведомлений о прогоне с помощью бота в <code>Telegram</code>.
 > Фреймворк также поддерживает уведомления по _электронной почте, Slack, Skype_ и _Mattermost_.
@@ -195,18 +214,11 @@ allure serve build/allure-results
 <img title="Telegram Notifications" src="images/screens/telegram_notifications.png">
 </p>
 
-## <img width="4%" title="Selenoid" src="images/logo/Selenoid.svg"> Пример запуска теста в Selenoid
-
-> Для каждого теста записывается и прилагается видео прогона.
-
-<p align="center">
-  <img title="Selenoid Video" src="images/gif/selenoid_video.gif">
-</p>
-
+</details>
 
 ## <img width="4%" title="Selenoid" src="images/logo/Selenoid.svg"> Пример запуска теста в Selenoid
 <details>
-<summary></summary>
+<summary>Подробнее</summary>
 
 > Для каждого теста записывается и прилагается видео прогона.
 
