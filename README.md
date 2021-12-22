@@ -48,6 +48,8 @@
 > В <code>Telegram</code> отправляются уведомления о пройденном прогоне
 
 ## <img width="4%" title="Jira" src="images/logo/ITerm2_v3_icon.png"> Запуск тестов из терминала
+<details>
+<summary>Подробнее</summary>
 
 ### :rocket: Локальный запуск тестов
 
@@ -92,7 +94,11 @@ gradle clean ${task}
 >
 > <code>THREADS</code> - количество потоков для запуска тестов
 
+</details>
+
 ### <img width="4%" title="Allure Report" src="images/logo/Allure_Report.svg"> Формирование отчета Allure
+<details>
+<summary>Подробнее</summary>
 
 > <details>
 > <summary>:exclamation:</summary>
@@ -103,6 +109,7 @@ gradle clean ${task}
 ```
 allure serve build/allure-results
 ```
+</details>
 
 ## <img width="4%" title="Jenkins" src="images/logo/Jenkins.svg"> Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/09-zlw-qa-sbermarket-project/)
 <details>
