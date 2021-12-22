@@ -67,6 +67,11 @@ gradle clean ${task}
 > 
 > <code>THREADS</code> - количество потоков для запуска тестов
 ### <img width="4%" title="Allure Report" src="images/logo/Allure_Report.svg"> Формирование отчета Allure
+> <details>
+> <summary>:exclamation:</summary>
+>
+> + Предварительно необходимо установить _Allure_
+> </details>
 ```
 allure serve build/allure-results
 ```
