@@ -67,7 +67,7 @@ allure serve build/allure-results
 ### :triangular_flag_on_post:	 Для запуска тестов в Jenkins необходимо выполнить следующие шаги:
 1. Открыть сборку [Jenkins](https://jenkins.autotests.cloud/job/09-zlw-qa-sbermarket-project)
 2. Нажать на таск <code>"Собрать с параметрами"</code>
-3. Указать [значения параметров](#:rocket:-параметры-сборки)
+3. Указать [значения параметров](#rocket-параметры-сборки)
 4. Нажать на кнопку <code>"Собрать"</code>
 
 <p align="center">
