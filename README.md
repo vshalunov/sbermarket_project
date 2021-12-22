@@ -203,9 +203,10 @@ allure serve build/allure-results
   <img title="Selenoid Video" src="images/gif/selenoid_video.gif">
 </p>
 
-<details>
-<summary><img width="4%" title="Selenoid" src="images/logo/Selenoid.svg"> Пример запуска теста в Selenoid </summary>
 
+## <img width="4%" title="Selenoid" src="images/logo/Selenoid.svg"> Пример запуска теста в Selenoid
+<details>
+<summary></summary>
 
 > Для каждого теста записывается и прилагается видео прогона.
 
