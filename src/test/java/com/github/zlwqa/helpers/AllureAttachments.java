@@ -41,7 +41,7 @@ public class AllureAttachments {
     }
 
     public static URL getVideoUrl(String sessionId) {
-        String videoUrl = "https://selenoid.autotests.cloud/video/" + sessionId + ".mp4";
+        String videoUrl = "http://65.108.161.82:8080/#/videos" + sessionId + ".mp4";
 
         try {
             return new URL(videoUrl);
