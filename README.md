@@ -31,6 +31,24 @@
 <img width="6%" title="Jira" src="images/logo/Jira.svg">
 </p>
 
+> В данном проекте автотесты написаны на <code>Java</code> с использованием фреймворка <code>Selenide</code>
+>  
+> В качестве библиотеки для модульного тестирования используется <code>JUnit 5</code>
+>
+> Для автоматизированной сборки проекта используется <code>Gradle</code>
+> 
+> <code>Jenkins</code> выполняет запуск тестов
+>
+> <code>Selenoid</code> выполняет запуск браузеров в контейнерах <code>Docker</code>
+>
+> <code>Allure</code> Report формирует отчет о запуске тестов
+>
+> Для автоматизированной сборки проекта используется <code>Gradle</code>
+>
+> Автотесты интегрируются с тест-менеджмент системой <code>Allure TestOps</code> и таск-трекер системой <code>Jira</code>
+>
+> После завершения прогона отправляются уведомления с помощью бота в <code>Telegram</code>
+
 ## <img width="4%" title="Jira" src="images/logo/ITerm2_v3_icon.png"> Запуск тестов из терминала
 
 ### :rocket: Локальный запуск тестов
@@ -111,7 +129,7 @@ allure serve build/allure-results
 
 ## <img width="4%" title="Allure Report" src="images/logo/Allure_Report.svg"> Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/09-zlw-qa-sbermarket-project/allure/)
 
-> **Allure-framework** используется в качестве инструмента для построения отчетов о прогоне автотестов.
+> <code>Allure-framework</code> используется в качестве инструмента для построения отчетов о прогоне автотестов.
 > Он позволяет получить информацию о ходе выполнения тестов, а также прикрепить скриншоты, логи и видео к формируемому отчету.
 > Имеется возможность указать различные теги, приоритеты и прочую сопутствующую информацию для тестов.
 >
@@ -136,7 +154,7 @@ allure serve build/allure-results
 
 ## <img width="4%" title="Allure TestOps" src="images/logo/Allure_TestOps.svg"> Интеграция тестов c тест-менеджмент системой [Allure TestOps](https://allure.autotests.cloud/project/778/dashboards)
 
-> **Allure TestOps** это платформа управления качеством программного обеспечения, объединяющая автоматическое и ручное тестирование, которая позволяет управлять всем, что связано с тестированием, в одном месте.
+> <code>Allure TestOps</code> это платформа управления качеством программного обеспечения, объединяющая автоматическое и ручное тестирование, которая позволяет управлять всем, что связано с тестированием, в одном месте.
 
 ### :test_tube:     Основной дашборд
 
@@ -164,7 +182,7 @@ allure serve build/allure-results
 
 ## <img width="4%" title="Jira" src="images/logo/Jira.svg"> Интеграция тестов c таск-трекер системой [Jira](https://jira.autotests.cloud/browse/HOMEWORK-288)
 
-> Интеграция с **Jira** позволяет добавлять в задачи тест-кейсы, запуски и их результаты.
+> Интеграция с <code>Jira</code> позволяет добавлять в задачи тест-кейсы, запуски и их результаты.
 
 <p align="center">
 <img title="Jira Issues" src="images/screens/jira_issues.png">
@@ -172,7 +190,7 @@ allure serve build/allure-results
 
 ## <img width="4%" title="Telegram" src="images/logo/Telegram.svg"> Уведомления в Telegram с использованием бота
 
-> Реализована отправка уведомлений о прогоне с помощью бота в **Telegram**.
+> Реализована отправка уведомлений о прогоне с помощью бота в <code>Telegram</code>.
 > Фреймворк также поддерживает уведомления по _электронной почте, Slack, Skype_ и _Mattermost_.
 
 <p align="center">
