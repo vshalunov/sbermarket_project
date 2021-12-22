@@ -204,7 +204,7 @@ allure serve build/allure-results
 </p>
 
 <details>
-<summary><img width="4%" title="Selenoid" src="images/logo/Selenoid.svg"> Пример запуска теста в Selenoid </summary>
+<summary><img width="4%" title="Selenoid" src="images/logo/Selenoid.svg"></summary>
 
 ## <img width="4%" title="Selenoid" src="images/logo/Selenoid.svg"> Пример запуска теста в Selenoid
 
