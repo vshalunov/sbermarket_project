@@ -48,6 +48,7 @@
 > В <code>Telegram</code> отправляются уведомления о пройденном прогоне
 
 ## <img width="4%" title="Jira" src="images/logo/ITerm2_v3_icon.png"> Запуск тестов из терминала
+
 <details>
 <summary>Подробнее</summary>
 
@@ -93,10 +94,11 @@ gradle clean ${task}
 > <code>BROWSER_SIZE</code> - размер браузера, на котором будут запускаться тесты (_по умолчанию - <code>1920x1080</code>_)
 >
 > <code>THREADS</code> - количество потоков для запуска тестов
-
+>
 </details>
 
 ### <img width="4%" title="Allure Report" src="images/logo/Allure_Report.svg"> Формирование отчета Allure
+
 <details>
 <summary>Подробнее</summary>
 
@@ -109,9 +111,11 @@ gradle clean ${task}
 ```
 allure serve build/allure-results
 ```
+
 </details>
 
 ## <img width="4%" title="Jenkins" src="images/logo/Jenkins.svg"> Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/09-zlw-qa-sbermarket-project/)
+
 <details>
 <summary>Подробнее</summary>
 
@@ -137,13 +141,13 @@ allure serve build/allure-results
 </details>
 
 ## <img width="4%" title="Allure Report" src="images/logo/Allure_Report.svg"> Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/09-zlw-qa-sbermarket-project/allure/)
+
 <details>
 <summary>Подробнее</summary>
 
 > <code>Allure-framework</code> используется в качестве инструмента для построения отчетов о прогоне автотестов.
 > Он позволяет получить информацию о ходе выполнения тестов, а также прикрепить скриншоты, логи и видео к формируемому отчету.
 > Имеется возможность указать различные теги, приоритеты и прочую сопутствующую информацию для тестов.
-
 
 ### :dart: Главная страница Allure-отчета
 
@@ -166,6 +170,7 @@ allure serve build/allure-results
 </details>
 
 ## <img width="4%" title="Allure TestOps" src="images/logo/Allure_TestOps.svg"> Интеграция тестов c тест-менеджмент системой [Allure TestOps](https://allure.autotests.cloud/project/778/dashboards)
+
 <details>
 <summary>Подробнее</summary>
 
@@ -198,6 +203,7 @@ allure serve build/allure-results
 </details>
 
 ## <img width="4%" title="Jira" src="images/logo/Jira.svg"> Интеграция тестов c таск-трекер системой [Jira](https://jira.autotests.cloud/browse/HOMEWORK-288)
+
 <details>
 <summary>Подробнее</summary>
 
@@ -224,6 +230,7 @@ allure serve build/allure-results
 </details>
 
 ## <img width="4%" title="Selenoid" src="images/logo/Selenoid.svg"> Пример запуска теста в Selenoid
+
 <details>
 <summary>Подробнее</summary>
 
