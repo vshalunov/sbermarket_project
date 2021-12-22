@@ -44,7 +44,7 @@ gradle clean ${task}
 > <details>
 > <summary>:exclamation:</summary>
 >
-> + В файле <code>credentials.properties</code> должен находиться _логин_ и _пароль_ от удаленного selenoid, на котором будут запускаться тесты.
+> + В файле <code>credentials.properties</code> должен находиться _логин_ и _пароль_ от удаленного selenoid, на котором будут запускаться тесты
 > </details>
 
 ```
