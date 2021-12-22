@@ -95,6 +95,39 @@ allure serve build/allure-results
 <img title="Allure Behaviors" src="images/screens/allure_behaviors.png">
 </p>
 
+## <img width="4%" title="Allure TestOps" src="images/logo/Allure_TestOps.svg"> Интеграция тестов c тест-менеджмент системой [Allure TestOps](https://allure.autotests.cloud/project/778/dashboards)
+
+### :test_tube:	 Основной дашборд
+
+<p align="center">
+<img title="Allure Overview Dashboard" src="images/screens/allure_overview_dashboard.png">
+</p>
+
+### :test_tube:	 Запуски тестов
+
+<p align="center">
+<img title="Allure Launches" src="images/screens/allure_launches.png">
+</p>
+
+### :test_tube:	 Результаты запуска тестов
+
+<p align="center">
+<img title="Allure Results" src="images/screens/allure_results.png">
+</p>
+
+### :jigsaw: Сгруппированные тест-кейсы по проверяемому функционалу
+
+<p align="center">
+<img title="Allure Test Cases" src="images/screens/allure_testcases.png">
+</p>
+
+
+## <img width="4%" title="Jira" src="images/logo/Jira.svg"> Интеграция тестов c таск-трекер системой [Jira](https://jira.autotests.cloud/browse/HOMEWORK-288)
+
+<p align="center">
+<img title="Jira Issues" src="images/screens/jira_issues.png">
+</p>
+
 ## <img width="4%" title="Telegram" src="images/logo/Telegram.svg"> Уведомления в Telegram с использованием бота
 <p align="center">
 <img title="Telegram Notifications" src="images/screens/telegram_notifications.png">
