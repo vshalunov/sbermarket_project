@@ -93,6 +93,11 @@ allure serve build/allure-results
 </p>
 
 ## <img width="4%" title="Allure Report" src="images/logo/Allure_Report.svg"> Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/09-zlw-qa-sbermarket-project/allure/)
+
+> **Allure-framework** используется в качестве инструмента для построения отчетов о прогоне автотестов.
+> Он позволяет получить информацию о ходе выполнения тестов, а также прикрепить скриншоты, логи и видео к формируемому отчету.
+> Имеется возможность указать различные теги, приоритеты и прочую сопутствующую информацию для тестов.
+> 
 ### :dart: Главная страница Allure-отчета
 <p align="center">
 <img title="Allure Overview" src="images/screens/allure_overview.png">
@@ -109,6 +114,8 @@ allure serve build/allure-results
 </p>
 
 ## <img width="4%" title="Allure TestOps" src="images/logo/Allure_TestOps.svg"> Интеграция тестов c тест-менеджмент системой [Allure TestOps](https://allure.autotests.cloud/project/778/dashboards)
+
+> **Allure TestOps** это платформа управления качеством программного обеспечения, объединяющая автоматическое и ручное тестирование, которая позволяет управлять всем, что связано с тестированием, в одном месте.
 
 ### :test_tube:	 Основной дашборд
 
@@ -137,16 +144,25 @@ allure serve build/allure-results
 
 ## <img width="4%" title="Jira" src="images/logo/Jira.svg"> Интеграция тестов c таск-трекер системой [Jira](https://jira.autotests.cloud/browse/HOMEWORK-288)
 
+> Интеграция с **Jira** позволяет добавлять в задачи тест-кейсы, запуски и их результаты.
+
 <p align="center">
 <img title="Jira Issues" src="images/screens/jira_issues.png">
 </p>
 
 ## <img width="4%" title="Telegram" src="images/logo/Telegram.svg"> Уведомления в Telegram с использованием бота
+
+> Реализована отправка уведомлений о прогоне с помощью бота в **Telegram**
+> Фреймворк также поддерживает уведомления по _электронной почте, Slack, Skype_ и _Mattermost_.
+
 <p align="center">
 <img title="Telegram Notifications" src="images/screens/telegram_notifications.png">
 </p>
 
 ## <img width="4%" title="Selenoid" src="images/logo/Selenoid.svg"> Пример запуска теста в Selenoid
+
+> Для каждого теста записывается и прилагается видео прогона 
+
 <p align="center">
   <img title="Selenoid Video" src="images/gif/selenoid_video.gif">
 </p>
