@@ -243,7 +243,7 @@ allure serve build/allure-results
 </details>
 
 <details>
-<summary>::heartbeat:: </summary>
+<summary>:heartbeat: </summary>
 
 ### Спасибо за идею оформления [jjfhj](https://github.com/jjfhj)
 
