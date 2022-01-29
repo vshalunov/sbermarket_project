@@ -31,6 +31,7 @@ public class SbermarketForYourselfTests extends TestBase {
 
     @Microservice("Console")
     @Test
+    @AllureId("6202")
     @DisplayName("Журнал консоли страницы не должен содержать ошибок")
     @Tags({@Tag("ForYourself"), @Tag("High")})
     @Feature("Главная страница СберМаркет 'Для себя'")
@@ -54,6 +55,7 @@ public class SbermarketForYourselfTests extends TestBase {
     @Tags({@Tag("ForYourself"), @Tag("High")})
     @DisplayName("Отображение значения")
     @ParameterizedTest(name = "{displayName} {0} в выпадающем списке адресов")
+    @AllureId("6197")
     @Feature("Главная страница СберМаркет 'Для себя'")
     @Story("Поле для поиска адреса")
     @Severity(SeverityLevel.BLOCKER)
@@ -74,6 +76,7 @@ public class SbermarketForYourselfTests extends TestBase {
     @DisplayName("Отображение значений")
     @Tags({@Tag("ForYourself"), @Tag("High")})
     @ParameterizedTest(name = "{displayName} {1} в подвале сайта у колонки с названием {0}")
+    @AllureId("6201")
     @Feature("Подвал")
     @Story("Подвал страницы СберМаркет 'Для себя'")
     @Severity(SeverityLevel.BLOCKER)

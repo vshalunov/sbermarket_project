@@ -31,6 +31,7 @@ public class SbermarketForBusinessTests extends TestBase {
 
     @Microservice("Console")
     @Test
+    @AllureId("6200")
     @DisplayName("Журнал консоли страницы не должен содержать ошибок")
     @Tags({@Tag("ForBusiness"), @Tag("High")})
     @Feature("Главная страница СберМаркет 'Для бизнеса'")
@@ -55,6 +56,7 @@ public class SbermarketForBusinessTests extends TestBase {
     }, delimiter = '|')
     @Tags({@Tag("ForBusiness"), @Tag("Low")})
     @ParameterizedTest(name = "Отображение вспомогательного текста в модальном окне {0}")
+    @AllureId("6199")
     @DisplayName("Отображение вспомогательного текста в модальном  окне")
     @Feature("Главная страница СберМаркет 'Для себя'")
     @Story("Вспомогательный текст в модальном окне")
@@ -76,6 +78,7 @@ public class SbermarketForBusinessTests extends TestBase {
     @DisplayName("Пункты навигационной панели")
     @Tags({@Tag("ForBusiness"), @Tag("High")})
     @ParameterizedTest(name = "Отображение пункта {0} в навигационной панели ")
+    @AllureId("6198")
     @Feature("Навигационная панель")
     @Story("Навигационная панель страницы СберМаркет 'Для бизнеса'")
     @Severity(SeverityLevel.BLOCKER)
