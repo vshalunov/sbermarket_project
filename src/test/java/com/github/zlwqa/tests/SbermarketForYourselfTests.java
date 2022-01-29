@@ -1,5 +1,9 @@
 package com.github.zlwqa.tests;
 
+import annotations.JiraIssue;
+import annotations.JiraIssues;
+import annotations.Layer;
+import annotations.Microservice;
 import com.github.zlwqa.helpers.AllureAttachments;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
@@ -19,13 +23,16 @@ import static com.codeborne.selenide.Selenide.$$;
 import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
+@Layer("web")
+@JiraIssues({@JiraIssue("HOMEWORK-288")})
 @DisplayName("Тестирование главной страницы СберМаркет 'Для себя'")
+@Owner("vshalunov")
 public class SbermarketForYourselfTests extends TestBase {
 
+    @Microservice("Console")
     @Test
     @DisplayName("Журнал консоли страницы не должен содержать ошибок")
     @Tags({@Tag("ForYourself"), @Tag("High")})
-    @Owner("Шалунов Василий (zlw-qa)")
     @Feature("Главная страница СберМаркет 'Для себя'")
     @Story("Журнал консоли")
     @Severity(SeverityLevel.CRITICAL)
@@ -41,12 +48,12 @@ public class SbermarketForYourselfTests extends TestBase {
         });
     }
 
+    @Microservice("Search address")
     @ValueSource(strings = {"Самара, Россия",
             "Самарская область, Россия"})
     @Tags({@Tag("ForYourself"), @Tag("High")})
     @DisplayName("Отображение значения")
     @ParameterizedTest(name = "{displayName} {0} в выпадающем списке адресов")
-    @Owner("Шалунов Василий (zlw-qa)")
     @Feature("Главная страница СберМаркет 'Для себя'")
     @Story("Поле для поиска адреса")
     @Severity(SeverityLevel.BLOCKER)
@@ -62,11 +69,11 @@ public class SbermarketForYourselfTests extends TestBase {
         });
     }
 
+    @Microservice("Footer")
     @MethodSource("com.github.zlwqa.tests.Footer#footerColumns")
     @DisplayName("Отображение значений")
     @Tags({@Tag("ForYourself"), @Tag("High")})
     @ParameterizedTest(name = "{displayName} {1} в подвале сайта у колонки с названием {0}")
-    @Owner("Шалунов Василий (zlw-qa)")
     @Feature("Подвал")
     @Story("Подвал страницы СберМаркет 'Для себя'")
     @Severity(SeverityLevel.BLOCKER)

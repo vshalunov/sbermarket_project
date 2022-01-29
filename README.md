@@ -247,7 +247,6 @@ allure serve build/allure-results
 
 ### Спасибо за идею оформления [jjfhj](https://github.com/jjfhj)
 
-
 </details>
 
 

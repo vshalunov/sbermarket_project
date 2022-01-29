@@ -1,5 +1,9 @@
 package com.github.zlwqa.tests;
 
+import annotations.JiraIssue;
+import annotations.JiraIssues;
+import annotations.Layer;
+import annotations.Microservice;
 import com.github.zlwqa.helpers.AllureAttachments;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
@@ -19,13 +23,16 @@ import static com.codeborne.selenide.Selenide.$$;
 import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
+@Layer("web")
+@JiraIssues({@JiraIssue("HOMEWORK-288")})
 @DisplayName("Тестирование главной страницы СберМаркет 'Для бизнеса'")
+@Owner("vshalunov")
 public class SbermarketForBusinessTests extends TestBase {
 
+    @Microservice("Console")
     @Test
     @DisplayName("Журнал консоли страницы не должен содержать ошибок")
     @Tags({@Tag("ForBusiness"), @Tag("High")})
-    @Owner("Шалунов Василий (zlw-qa)")
     @Feature("Главная страница СберМаркет 'Для бизнеса'")
     @Story("Журнал консоли")
     @Severity(SeverityLevel.CRITICAL)
@@ -41,6 +48,7 @@ public class SbermarketForBusinessTests extends TestBase {
         });
     }
 
+    @Microservice("Modal window")
     @CsvSource(value = {
             "Войти | Введите номер телефона, чтобы войти или зарегистрироваться",
             "Заказать обратный звонок | Мы свяжемся с вами в течениии следующего рабочего дня и ответим на все вопросы"
@@ -48,7 +56,6 @@ public class SbermarketForBusinessTests extends TestBase {
     @Tags({@Tag("ForBusiness"), @Tag("Low")})
     @ParameterizedTest(name = "Отображение вспомогательного текста в модальном окне {0}")
     @DisplayName("Отображение вспомогательного текста в модальном  окне")
-    @Owner("Шалунов Василий (zlw-qa)")
     @Feature("Главная страница СберМаркет 'Для себя'")
     @Story("Вспомогательный текст в модальном окне")
     @Severity(SeverityLevel.MINOR)
@@ -64,11 +71,11 @@ public class SbermarketForBusinessTests extends TestBase {
         });
     }
 
+    @Microservice("Top navigate panel")
     @EnumSource(TopNavigatePanelForBusiness.class)
     @DisplayName("Пункты навигационной панели")
     @Tags({@Tag("ForBusiness"), @Tag("High")})
     @ParameterizedTest(name = "Отображение пункта {0} в навигационной панели ")
-    @Owner("Шалунов Василий (zlw-qa)")
     @Feature("Навигационная панель")
     @Story("Навигационная панель страницы СберМаркет 'Для бизнеса'")
     @Severity(SeverityLevel.BLOCKER)
