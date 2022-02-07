@@ -26,7 +26,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 @Layer("web")
 @JiraIssues({@JiraIssue("HOMEWORK-288")})
 @DisplayName("Тестирование главной страницы СберМаркет 'Для себя'")
-@Owner("kgordienko")
+@Owner("vshalunov")
 public class SbermarketForYourselfTests extends TestBase {
 
     @Microservice("Console")
