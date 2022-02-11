@@ -2,8 +2,12 @@ package com.github.zlwqa.config;
 
 import org.aeonbits.owner.Config;
 
-@Config.Sources({"classpath:config/locale.properties"})
-public interface WebDriverConfig extends Config {
+@Config.LoadPolicy(Config.LoadType.MERGE)
+@Config.Sources({
+        "system:properties",
+        "file:/tmp/credentials.properties",
+        "classpath:config/locale.properties"
+})public interface WebDriverConfig extends Config {
 
     @Key("browser")
     @DefaultValue("chrome")

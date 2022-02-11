@@ -9,17 +9,17 @@ import static java.lang.String.format;
 
 public class WebDriverUtil {
 
-    private static final WebDriverConfig config = ConfigFactory.create(WebDriverConfig.class, System.getProperties());
-    private static final CredentialsConfig credentials = ConfigFactory.create(CredentialsConfig.class);
-    private static final String login = credentials.login();
-    private static final String password = credentials.password();
-    private static final String selenoidURL = System.getProperty("remoteURL");
-    private static final String remoteURL = format("https://%s:%s@%s", login, password, selenoidURL);
+    private static final WebDriverConfig CONFIG = ConfigFactory.create(WebDriverConfig.class, System.getProperties());
+    private static final CredentialsConfig CREDENTIALS = ConfigFactory.create(CredentialsConfig.class);
+    private static final String LOGIN = CREDENTIALS.login();
+    private static final String PASSWORD = CREDENTIALS.password();
+    private static final String SELENOID_URL = System.getProperty("remoteURL");
+    private static final String REMOTE_URL = format("https://%s:%s@%s", LOGIN, PASSWORD, SELENOID_URL);
 
     public static void configure() {
-        Configuration.browser = config.browser();
-        Configuration.browserVersion = config.versionBrowser();
-        Configuration.browserSize = config.browserSize();
+        Configuration.browser = CONFIG.browser();
+        Configuration.browserVersion = CONFIG.versionBrowser();
+        Configuration.browserSize = CONFIG.browserSize();
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         ChromeOptions chromeOptions = new ChromeOptions();
@@ -33,7 +33,7 @@ public class WebDriverUtil {
         if (!System.getProperty("remoteURL").equals("")) {
             capabilities.setCapability("enableVNC", true);
             capabilities.setCapability("enableVideo", true);
-            Configuration.remote = remoteURL;
+            Configuration.remote = REMOTE_URL;
             //Configuration.remote = System.getProperty("remoteURL");
         }
 

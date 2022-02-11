@@ -64,11 +64,16 @@ public class SbermarketForYourselfTests extends TestBase {
         mainpages.openMainPageYourself();
 
         step("Ввести в поле поиск Самар", () -> {
-            $("input._1H6W1").setValue("Самар");
+            $("input._1OTiP").setValue("Самар");
         });
         step("Отображение значения " + searchQuery + "в выпадающем списке", () -> {
-            $("div._2oqP5").shouldHave(text(searchQuery));
+            $("div.ENK70").shouldHave(text(searchQuery));
         });
+
+        // Для отладки выпадающего списка
+        //setTimeout(function() {
+        //  debugger;
+        //}, 3000);
     }
 
     @Microservice("Footer")
