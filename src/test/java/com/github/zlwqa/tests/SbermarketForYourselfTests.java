@@ -106,7 +106,7 @@ public class SbermarketForYourselfTests extends TestBase {
 
     @Microservice("Feedback")
     @Test
-    @DisplayName("Проверка отображения информационного сообщения валидации поля 'Адрес электронной почты'")
+    @DisplayName("Проверка отображения валидационного сообщения поля 'Адрес электронной почты'")
     @Tags({@Tag("ForYourself"), @Tag("High")})
     @Feature("Подвал")
     @Story("Подвал страницы СберМаркет 'Для себя'")
