@@ -4,6 +4,7 @@ import annotations.JiraIssue;
 import annotations.JiraIssues;
 import annotations.Layer;
 import annotations.Microservice;
+import com.codeborne.pdftest.PDF;
 import com.github.zlwqa.helpers.AllureAttachments;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
@@ -14,14 +15,22 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
+import java.io.File;
+import java.io.IOException;
+import java.text.ParseException;
 import java.util.List;
 
 import static com.codeborne.selenide.CollectionCondition.texts;
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.Is.is;
+import static org.hamcrest.core.IsNull.nullValue;
 
 @Layer("web")
 @JiraIssues({@JiraIssue("HOMEWORK-288")})
@@ -97,7 +106,7 @@ public class SbermarketForYourselfTests extends TestBase {
 
     @Microservice("Feedback")
     @Test
-    @DisplayName("Отображение значений")
+    @DisplayName("Проверка отображения информационного сообщения валидации поля 'Адрес электронной почты'")
     @Tags({@Tag("ForYourself"), @Tag("High")})
     @Feature("Подвал")
     @Story("Подвал страницы СберМаркет 'Для себя'")
@@ -116,5 +125,31 @@ public class SbermarketForYourselfTests extends TestBase {
                 .sendFeedBack()
                 .checkingDisplayOfTheValidationInformationMessageOfEmailField();
 
+    }
+
+    @Microservice("Feedback")
+    @Test
+    @DisplayName("Скачивание PDF-файла 'Обработка персональных данных', проверка его свойств и содержимого")
+    @Tags({@Tag("ForYourself"), @Tag("Medium")})
+    @Feature("Подвал")
+    @Story("Подвал страницы СберМаркет 'Для себя'")
+    @Severity(SeverityLevel.NORMAL)
+    @Link(name = "СберМаркет", url = "https://sbermarket.ru/")
+    void downloadPDFAndCheckPropertiesAndContentTest() throws IOException, ParseException {
+        mainpages.openMainPageYourself();
+        feedbackModalWindow.openFeedbackForm();
+
+        step("Скачать PDF-файл 'Образец заполнения доверенности', проверить его свойства и содержимое", () -> {
+            File pdf = $(byText("персональных данных")).download();
+            PDF parsedPdf = new PDF(pdf);
+            assertThat(parsedPdf.title, is(nullValue()));
+            assertThat(parsedPdf.author, is(nullValue()));
+            assertThat(parsedPdf.subject, is(nullValue()));
+            assertThat(parsedPdf.keywords, is(nullValue()));
+            assertThat(parsedPdf.signed, is(false));
+            assertThat(parsedPdf.encrypted, is(false));
+            assertThat(parsedPdf.producer, is("iLovePDF"));
+            assertThat(parsedPdf.numberOfPages, equalTo(16));
+        });
     }
 }
