@@ -241,10 +241,24 @@ allure serve build/allure-results
 <summary>Подробнее</summary>
 
 > Реализована отправка уведомлений о прогоне с помощью бота в <code>Telegram</code>.
-> Фреймворк также поддерживает уведомления по _электронной почте, Slack, Skype_ и _Mattermost_.
+> Фреймворк также поддерживает уведомления по _Slack, Skype_ и _Mattermost_.
 
 <p align="center">
 <img title="Telegram Notifications" src="images/screens/telegram_notifications.png">
+</p>
+
+</details>
+
+## <img width="4%" title="Email" src="images/logo/gmail_icon.svg"> Уведомления на почту
+
+<details>
+<summary>Подробнее</summary>
+
+> Реализована отправка уведомлений о прогоне на почту.
+> Фреймворк также поддерживает уведомления по _Slack, Skype_ и _Mattermost_.
+
+<p align="center">
+<img title="Email Notifications" src="images/screens/gmail_notifications.png">
 </p>
 
 </details>
