@@ -51,7 +51,7 @@ public class SbermarketForYourselfTests extends TestBase {
 
     @Microservice("Search address")
     @ValueSource(strings = {"Самара, Россия",
-            "Самарская область, Россия"})
+            "Самарская область, Россия "})
     @Tags({@Tag("ForYourself"), @Tag("High")})
     @DisplayName("Отображение значения")
     @ParameterizedTest(name = "{displayName} {0} в выпадающем списке адресов")
@@ -59,7 +59,7 @@ public class SbermarketForYourselfTests extends TestBase {
     @Feature("Главная страница СберМаркет 'Для себя'")
     @Story("Поле для поиска адреса")
     @Severity(SeverityLevel.BLOCKER)
-    @Link(name = "СберМаркет", url = "https://business.sbermarket.ru/")
+    @Link(name = "СберМаркет", url = "https://sbermarket.ru/")
     void searchAddressResultsTest(String searchQuery) {
         mainpages.openMainPageYourself();
 
@@ -85,7 +85,7 @@ public class SbermarketForYourselfTests extends TestBase {
     @Feature("Подвал")
     @Story("Подвал страницы СберМаркет 'Для себя'")
     @Severity(SeverityLevel.BLOCKER)
-    @Link(name = "СберМаркет", url = "https://business.sbermarket.ru/")
+    @Link(name = "СберМаркет", url = "https://sbermarket.ru/")
     void displayValuesInTheFooterTest(String nameColumnFooter, List<String> footerColumns) {
         mainpages.openMainPageYourself();
 
@@ -93,5 +93,28 @@ public class SbermarketForYourselfTests extends TestBase {
             $$("div.footer__column").find(text(nameColumnFooter)).$$("li")
                     .shouldHave(texts(footerColumns));
         });
+    }
+
+    @Microservice("Feedback")
+    @Test
+    @DisplayName("Отображение значений")
+    @Tags({@Tag("ForYourself"), @Tag("High")})
+    @Feature("Подвал")
+    @Story("Подвал страницы СберМаркет 'Для себя'")
+    @Severity(SeverityLevel.BLOCKER)
+    @Link(name = "СберМаркет", url = "https://sbermarket.ru/")
+    void emailValidationInFeedbackTest() {
+        mainpages.openMainPageYourself();
+
+        feedbackModalWindow.openFeedbackForm()
+                .fillInTheFieldCellPhone()
+                .fillInTheFieldEmail()
+                .fillInTheFieldYourCity()
+                .fillInTheFieldYourName()
+                .fillInTheFieldDescribeYourQuestion()
+                .selectFeedbackType()
+                .sendFeedBack()
+                .checkingDisplayOfTheValidationInformationMessageOfEmailField();
+
     }
 }
