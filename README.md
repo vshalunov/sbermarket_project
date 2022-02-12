@@ -47,7 +47,7 @@
 >
 > Автотесты интегрируются с тест-менеджмент системой <code>Allure TestOps</code> и таск-трекер системой <code>Jira</code>
 >
-> Уведомления о пройденном прогоне отправляются в <code>Telegram</code> и на электронную почту
+> Уведомления о пройденном прогоне отправляются в <code>Telegram</code> и на электронную почту с помощью библиотеки [allure-notifications](https://github.com/qa-guru/allure-notifications)
 
 ## <img width="4%" title="Jira" src="images/logo/ITerm2_v3_icon.png"> Запуск тестов из терминала
 
