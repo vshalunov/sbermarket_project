@@ -182,6 +182,24 @@ allure serve build/allure-results
 <img title="Allure Overview Dashboard" src="images/screens/allure_overview_dashboard.png">
 </p>
 
+### :test_tube:     Дашборд для отображения успешности и длительности тестов
+
+<p align="center">
+<img title="Allure Overview Dashboard" src="images/screens/allure_duration_and_success_rate_dashboard.png">
+</p>
+
+### :test_tube:     Дашборд по стендам
+
+<p align="center">
+<img title="Allure Overview Dashboard" src="images/screens/allure_stands_dashboard.png">
+</p>
+
+### :test_tube:     Дашборд по членам команды
+
+<p align="center">
+<img title="Allure Overview Dashboard" src="images/screens/allure_team_dashboard.png">
+</p>
+
 ### :test_tube:     Запуски тестов
 
 <p align="center">
