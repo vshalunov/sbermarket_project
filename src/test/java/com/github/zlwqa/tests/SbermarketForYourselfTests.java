@@ -132,6 +132,7 @@ public class SbermarketForYourselfTests extends TestBase {
     @DisplayName("Скачивание PDF-файла 'Обработка персональных данных', проверка его свойств и содержимого")
     @Tags({@Tag("ForYourself"), @Tag("Medium")})
     @Feature("Подвал")
+    @Owner("anotherQA")
     @Story("Подвал страницы СберМаркет 'Для себя'")
     @Severity(SeverityLevel.NORMAL)
     @Link(name = "СберМаркет", url = "https://sbermarket.ru/")

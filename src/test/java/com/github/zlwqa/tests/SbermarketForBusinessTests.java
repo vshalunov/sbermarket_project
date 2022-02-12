@@ -80,6 +80,7 @@ public class SbermarketForBusinessTests extends TestBase {
     @ParameterizedTest(name = "Отображение пункта {0} в навигационной панели ")
     @AllureId("6198")
     @Feature("Навигационная панель")
+    @Owner("anotherQA")
     @Story("Навигационная панель страницы СберМаркет 'Для бизнеса'")
     @Severity(SeverityLevel.BLOCKER)
     @Link(name = "СберМаркет", url = "https://business.sbermarket.ru/")
