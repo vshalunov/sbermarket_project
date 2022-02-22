@@ -65,12 +65,10 @@ public class SbermarketForBusinessTests extends TestBase {
     void displayDescriptionOfModalWindowTest(String modalWindow, String descriptionOfModalWindow) {
         mainpages.openMainPageForBusiness();
 
-        step("Открыть модальное окно " + modalWindow, () -> {
-            $$("button._30Jfu").find(text(modalWindow)).should(enabled, Duration.ofSeconds(30)).click();
-        });
-        step("Отображение вспомогательного текста " + descriptionOfModalWindow + "в модальном окне", () -> {
-            $("div.bKabp").shouldHave(text(descriptionOfModalWindow));
-        });
+        step("Открыть модальное окно " + modalWindow, () ->
+                $$("button._30Jfu").find(text(modalWindow)).should(enabled, Duration.ofSeconds(30)).click());
+        step("Отображение вспомогательного текста " + descriptionOfModalWindow + "в модальном окне", () ->
+                $("div.bKabp").shouldHave(text(descriptionOfModalWindow)));
     }
 
     @Microservice("Top navigate panel")
@@ -87,10 +85,7 @@ public class SbermarketForBusinessTests extends TestBase {
     void displayOfNavigateItemTest(TopNavigatePanelForBusiness topNavigatePanelForBusiness) {
         mainpages.openMainPageForBusiness();
 
-        step("Найти отображение пункта " + topNavigatePanelForBusiness + " в навигационной панели", () -> {
-            $("._2mePy").shouldHave(text(topNavigatePanelForBusiness.getTopNavigatePanel()));
-        });
+        step("Найти отображение пункта " + topNavigatePanelForBusiness + " в навигационной панели", () ->
+                $("._2mePy").shouldHave(text(topNavigatePanelForBusiness.getTopNavigatePanel())));
     }
-
-
 }

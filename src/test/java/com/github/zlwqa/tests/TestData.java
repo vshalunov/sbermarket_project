@@ -1,8 +1,11 @@
 package com.github.zlwqa.tests;
 
 import com.github.javafaker.Faker;
+import org.junit.jupiter.params.provider.Arguments;
 
+import java.util.List;
 import java.util.Locale;
+import java.util.stream.Stream;
 
 public class TestData {
 
@@ -18,4 +21,12 @@ public class TestData {
     public static String emailValidationMessage = "Email адрес имеет неправильный формат";
     public static String feedbackType = "Другое";
 
+    public static Stream<Arguments> footerColumns() {
+        return Stream.of(
+                Arguments.of("СберМаркет",
+                        List.of("О компании", "Контакты", "Вакансии", "Документы", "Стать партнером")),
+                Arguments.of("Помощь покупателю",
+                        List.of("Как мы работаем", "Зоны доставки", "Доставка и оплата", "Помощь"))
+        );
+    }
 }

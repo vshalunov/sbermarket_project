@@ -72,12 +72,11 @@ public class SbermarketForYourselfTests extends TestBase {
     void searchAddressResultsTest(String searchQuery) {
         mainpages.openMainPageYourself();
 
-        step("Ввести в поле поиск Самар", () -> {
-            $("input._1OTiP").setValue("Самар");
-        });
-        step("Отображение значения " + searchQuery + "в выпадающем списке", () -> {
-            $("div.ENK70").shouldHave(text(searchQuery));
-        });
+        step("Ввести в поле поиск Самар", () ->
+                $("input._1OTiP").setValue("Самар"));
+
+        step("Отображение значения " + searchQuery + "в выпадающем списке", () ->
+                $("div.ENK70").shouldHave(text(searchQuery)));
 
         // Для отладки выпадающего списка
         //setTimeout(function() {
@@ -86,7 +85,7 @@ public class SbermarketForYourselfTests extends TestBase {
     }
 
     @Microservice("Footer")
-    @MethodSource("com.github.zlwqa.tests.Footer#footerColumns")
+    @MethodSource("com.github.zlwqa.tests.TestData#footerColumns")
     @DisplayName("Отображение значений")
     @Tags({@Tag("ForYourself"), @Tag("High")})
     @ParameterizedTest(name = "{displayName} {1} в подвале сайта у колонки с названием {0}")
@@ -98,10 +97,9 @@ public class SbermarketForYourselfTests extends TestBase {
     void displayValuesInTheFooterTest(String nameColumnFooter, List<String> footerColumns) {
         mainpages.openMainPageYourself();
 
-        step("Перейти в категорию " + nameColumnFooter, () -> {
-            $$("div.footer__column").find(text(nameColumnFooter)).$$("li")
-                    .shouldHave(texts(footerColumns));
-        });
+        step("Перейти в категорию " + nameColumnFooter, () ->
+                $$("div.footer__column").find(text(nameColumnFooter)).$$("li")
+                        .shouldHave(texts(footerColumns)));
     }
 
     @Microservice("Feedback")
@@ -123,7 +121,7 @@ public class SbermarketForYourselfTests extends TestBase {
                 .fillInTheFieldDescribeYourQuestion()
                 .selectFeedbackType()
                 .sendFeedBack()
-                .checkingDisplayOfTheValidationInformationMessageOfEmailField();
+                .checkingValidationMessageOfEmailField();
 
     }
 

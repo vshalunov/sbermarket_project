@@ -58,7 +58,7 @@ public class FeedbackModalWindow {
     }
 
     @Step("Проверка отображения валидационного сообщения поля 'Адрес электронной почты'")
-    public FeedbackModalWindow checkingDisplayOfTheValidationInformationMessageOfEmailField() {
+    public FeedbackModalWindow checkingValidationMessageOfEmailField() {
         $(".iOskx").shouldHave(text(emailValidationMessage));
         return this;
     }

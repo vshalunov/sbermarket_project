@@ -29,9 +29,7 @@ public class TestBase {
         AllureAttachments.pageSource();
         AllureAttachments.browserConsoleLogs();
         AllureAttachments.addVideo();
-        step("Закрыть браузер", () -> {
-            Selenide.closeWebDriver();
-        });
+        step("Закрыть браузер", Selenide::closeWebDriver);
     }
 
 
